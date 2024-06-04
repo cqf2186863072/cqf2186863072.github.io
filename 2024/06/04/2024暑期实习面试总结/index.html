@@ -20,17 +20,21 @@
     var CONFIG = {"hostname":"cqf2186863072.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="https://cqf2186863072.github.io/tags/index.html">
+  <meta name="description" content="本文仅总结面试中遇到的高频&#x2F;对实际开发有启发性意义的问题 C++ 虚函数实现原理 析构函数声明为虚函数的原因 分析构造函数中能否调用虚函数，并与C#中类似的情况对比 虚表指针初始化时机     对象的内存布局 派生类指针转换为基类指针时，所指向地址的变化 菱形继承   右值引用 智能指针 unordered_map的实现 对于较大规模的数据，优化哈希表的方法   vector的实现 扩容实现原理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2024暑期实习面试总结">
+<meta property="og:url" content="https://cqf2186863072.github.io/2024/06/04/2024%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Susie&#39; Blog">
+<meta property="og:description" content="本文仅总结面试中遇到的高频&#x2F;对实际开发有启发性意义的问题 C++ 虚函数实现原理 析构函数声明为虚函数的原因 分析构造函数中能否调用虚函数，并与C#中类似的情况对比 虚表指针初始化时机     对象的内存布局 派生类指针转换为基类指针时，所指向地址的变化 菱形继承   右值引用 智能指针 unordered_map的实现 对于较大规模的数据，优化哈希表的方法   vector的实现 扩容实现原理">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-04-22T04:46:29.000Z">
-<meta property="article:modified_time" content="2024-04-22T05:01:36.766Z">
+<meta property="article:published_time" content="2024-06-04T15:24:50.049Z">
+<meta property="article:modified_time" content="2024-06-04T15:26:55.352Z">
 <meta property="article:author" content="Susie">
+<meta property="article:tag" content="面试">
+<meta property="article:tag" content="游戏客户端开发">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://cqf2186863072.github.io/tags/">
+<link rel="canonical" href="https://cqf2186863072.github.io/2024/06/04/2024%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/">
 
 
 <script id="page-configurations">
@@ -38,13 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签 | Susie' Blog
-</title>
+  <title>2024暑期实习面试总结 | Susie' Blog</title>
   
 
 
@@ -156,51 +159,181 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cqf2186863072.github.io/2024/06/04/2024%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Susie">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Susie' Blog">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2024暑期实习面试总结
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">标签
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2024-06-04 23:24:50 / 修改时间：23:26:55" itemprop="dateCreated datePublished" datetime="2024-06-04T23:24:50+08:00">2024-06-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Log/" itemprop="url" rel="index"><span itemprop="name">Log</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文仅总结面试中遇到的<strong>高频/对实际开发有启发性意义</strong>的问题</p>
+<h1 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h1><ol>
+<li>虚函数实现原理<ol>
+<li>析构函数声明为虚函数的原因</li>
+<li>分析构造函数中能否调用虚函数，并与C#中类似的情况对比<ol>
+<li>虚表指针初始化时机</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>对象的内存布局<ol>
+<li>派生类指针转换为基类指针时，所指向地址的变化</li>
+<li>菱形继承</li>
+</ol>
+</li>
+<li>右值引用</li>
+<li>智能指针</li>
+<li><code>unordered_map</code>的实现<ol>
+<li>对于较大规模的数据，优化哈希表的方法</li>
+</ol>
+</li>
+<li><code>vector</code>的实现<ol>
+<li>扩容实现原理<ol>
+<li>扩容因子的选择</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="C＃"><a href="#C＃" class="headerlink" title="C＃"></a>C＃</h1><ol>
+<li>装箱拆箱<ol>
+<li>如何避免装箱拆箱</li>
+</ol>
+</li>
+<li>GC<ol>
+<li>标记清除算法中，标记的机制</li>
+<li>分代算法</li>
+</ol>
+</li>
+<li>委托与事件</li>
+</ol>
+<h1 id="Unity"><a href="#Unity" class="headerlink" title="Unity"></a>Unity</h1><ol>
+<li>MonoBehaviour的生命周期<ol>
+<li>FixedUpdate的机制<ol>
+<li>整个程序卡住，FixedUpdate还能否正常调用？</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>协程<ol>
+<li>使用协程而非多线程的原因</li>
+<li>协程实现机制</li>
+</ol>
+</li>
+<li>editor中的坐标系<ol>
+<li>左手系</li>
+<li>欧拉角</li>
+</ol>
+</li>
+</ol>
+<h1 id="图形学"><a href="#图形学" class="headerlink" title="图形学"></a>图形学</h1><p><em>PS：由于本人是图形学新手，所以面试官问的都比较简单</em></p>
+<ol>
+<li>点乘叉乘<ol>
+<li>如何判断两条线段是否相交？</li>
+<li>为什么二维空间下的叉乘结果是标量？</li>
+<li>如何判断一个点是否在三角形内？</li>
+</ol>
+</li>
+<li>绘制三角形<ol>
+<li>描线法（不知道是不是叫这个名字）</li>
+<li>重心坐标法<ol>
+<li>在自己实现的软渲染器中，如何利用点相对于三角形的重心坐标求其uv坐标、光照？</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ol>
+<li>寻路算法<ol>
+<li>Astar</li>
+<li>分层寻路</li>
+</ol>
+</li>
+<li>状态同步与帧同步<ol>
+<li>区别、优缺点</li>
+<li>moba、mmo分别用什么同步方式？</li>
+</ol>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag"># 面试</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag"># 游戏客户端开发</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/04/22/%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8/" rel="prev" title="右值引用">
+      <i class="fa fa-chevron-left"></i> 右值引用
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              目前共计 9 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/C/" style="font-size: 12px; color: #ccc">C++</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 12px; color: #ccc">人工智能</a> <a href="/tags/%E5%8F%B3%E5%80%BC/" style="font-size: 12px; color: #ccc">右值</a> <a href="/tags/%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8/" style="font-size: 12px; color: #ccc">右值引用</a> <a href="/tags/%E6%97%85%E8%A1%8C%E5%95%86%E9%97%AE%E9%A2%98/" style="font-size: 12px; color: #ccc">旅行商问题</a> <a href="/tags/%E6%B8%B8%E6%88%8F%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BC%80%E5%8F%91/" style="font-size: 12px; color: #ccc">游戏客户端开发</a> <a href="/tags/%E7%A7%BB%E5%8A%A8%E8%AF%AD%E4%B9%89/" style="font-size: 12px; color: #ccc">移动语义</a> <a href="/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/" style="font-size: 12px; color: #ccc">遗传算法</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 12px; color: #ccc">面试</a>
-            </div>
-          </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -251,6 +384,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C"><span class="nav-text">C++</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C%EF%BC%83"><span class="nav-text">C＃</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity"><span class="nav-text">Unity</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E5%AD%A6"><span class="nav-text">图形学</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
